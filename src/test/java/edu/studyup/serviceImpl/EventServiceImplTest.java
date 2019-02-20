@@ -91,7 +91,7 @@ class EventServiceImplTest {
 	
 	@Test
 	void testUpdateEventname_WrongEventID_BadCase() {
-		int eventID = 4;
+		int eventID = 3;
 		Assertions.assertThrows(StudyUpException.class, () -> {
 			eventServiceImpl.updateEventName(eventID, "Renamed Event 4");
 		  });
@@ -194,6 +194,4 @@ class EventServiceImplTest {
 			eventServiceImpl.addStudentToEvent(student3, eventID);
 		  });
 	}
-	
-	
 }
